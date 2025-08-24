@@ -1,6 +1,6 @@
 # Cloudflared Tunnels Configuration
 
-This repository contains the Cloudflare tunnel configurations and systemd services for brad-dougherty.com subdomains.
+This repository contains the Cloudflare tunnel configurations and systemd services for all tunnels and applications.
 
 ## Services
 
@@ -116,6 +116,28 @@ sudo systemctl start cloudflared-ssh.service cloudflared-wsl.service
 - SSH access is available through both domain endpoints
 - AI image gen service is protected by Cloudflare Access authentication
 - All services run with auto-restart for reliability
+
+## All Tunnels Overview
+
+### Active Tunnels (with configurations in this repo)
+
+| Tunnel Name | ID | Status | Domains | Purpose |
+|-------------|-----|--------|---------|---------|
+| **ssh-access** | `5ec6b36f-879a-41e4-b90e-17ad6aab6a4f` | ✅ Active (2 connections) | `ssh.brad-dougherty.com`<br>`wsl-ssh.brad-dougherty.com` | SSH access to local machine |
+| **wsl-ai-gen** | `7c46021c-2ea9-41d5-bd3f-09f81ce9530e` | ✅ Active (2 connections) | `ai-image-gen.brad-dougherty.com`<br>`terminal.brad-dougherty.com` | AI image generation & terminal |
+
+### Other Tunnels (configurations not tracked here yet)
+
+| Tunnel Name | ID | Status | Purpose |
+|-------------|-----|--------|---------|
+| **cascade-webhook** | `4158f6cf-fbaf-4980-85c7-0b4aa00d4657` | ✅ Active (4 connections) | Cascade webhook service |
+| **cascadeadventures-legacy** | `a7577b7a-4f80-4d66-8e8a-24821b9949ed` | ✅ Active (4 connections) | Legacy Cascade Adventures site |
+| **cascadeadventures.net** | `107da296-cabd-48c9-b06e-225a0d7c47bb` | ⚠️ Inactive | Main Cascade Adventures site |
+| **coder-server** | `d83cf254-dc78-4282-a739-5e383f4eb1fd` | ✅ Active (4 connections) | Code server/development environment |
+| **coolify** | `b3c8a584-acd6-4dfc-a568-2c6429a8042f` | ⚠️ Inactive | Coolify deployment platform |
+| **hire-test** | `6db913bb-e97c-4ef2-a7a4-bf06e34471f2` | ⚠️ Inactive | Hiring/testing application |
+| **prod-pi** | `187dc599-a1c8-48d0-84aa-19fa622ccd3a` | ⚠️ Inactive | Production Raspberry Pi services |
+| **resume.brad-dougherty.com** | `7ec98ccc-054e-4465-92aa-6c596a87fa38` | ⚠️ Inactive | Personal resume site |
 
 ## Live URLs
 
