@@ -1,0 +1,13 @@
+# Credential files - contain sensitive tunnel tokens
+*.json
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db

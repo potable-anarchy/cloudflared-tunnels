@@ -1,0 +1,9 @@
+tunnel: 5ec6b36f-879a-41e4-b90e-17ad6aab6a4f
+credentials-file: /home/brad/.cloudflared/5ec6b36f-879a-41e4-b90e-17ad6aab6a4f.json
+
+ingress:
+  - hostname: ssh.brad-dougherty.com
+    service: ssh://127.0.0.1:22
+  - hostname: wsl-ssh.brad-dougherty.com
+    service: ssh://127.0.0.1:22
+  - service: http_status:404

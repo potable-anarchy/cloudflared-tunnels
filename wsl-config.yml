@@ -1,0 +1,9 @@
+tunnel: 7c46021c-2ea9-41d5-bd3f-09f81ce9530e
+credentials-file: /home/brad/.cloudflared/7c46021c-2ea9-41d5-bd3f-09f81ce9530e.json
+
+ingress:
+  - hostname: ai-image-gen.brad-dougherty.com
+    service: http://127.0.0.1:7860
+  - hostname: terminal.brad-dougherty.com
+    service: http://127.0.0.1:4200
+  - service: http_status:404

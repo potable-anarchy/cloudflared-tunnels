@@ -1,0 +1,16 @@
+[Unit]
+Description=Cloudflared WSL Tunnel (AI Image Gen)
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=brad
+ExecStart=/usr/local/bin/cloudflared tunnel --config /home/brad/.cloudflared/wsl-config.yml run
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
